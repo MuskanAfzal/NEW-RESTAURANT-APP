@@ -36,7 +36,7 @@ const About = () => {
         <h2>Meet Our Team</h2>
         <div className="team-members">
           {teamMembers.map((member, index) => {
-            const imagePath = `${process.env.PUBLIC_URL}/images/${member.image}`;
+            const imagePath = `${process.env.PUBLIC_URL}${member.image}`;
             console.log(`Rendering team member: ${member.name}, Image path: ${imagePath}`);
             return (
               <div
@@ -55,7 +55,7 @@ const About = () => {
         </div>
         {hoveredMember && (
           <div className="hovered-member-image">
-            <img src={`${process.env.PUBLIC_URL}/images/${hoveredMember.image}`} alt={hoveredMember.name} />
+            <img src={`${process.env.PUBLIC_URL}${hoveredMember.image}`} alt={hoveredMember.name} />
           </div>
         )}
       </section>
