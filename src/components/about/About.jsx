@@ -8,10 +8,20 @@ const About = () => {
 
   useEffect(() => {
     fetch('/data.json')
-      .then(response => response.json())
-      .then(data => setTeamMembers(data.teamMembers))
+      .then(response => {
+        console.log('Fetched response:', response);
+        return response.json();
+      })
+      .then(data => {
+        console.log('Fetched data:', data);
+        setTeamMembers(data.teamMembers);
+      })
       .catch(error => console.error('Error fetching data:', error));
   }, []);
+
+  useEffect(() => {
+    console.log('Team members state updated:', teamMembers);
+  }, [teamMembers]);
 
   return (
     <div className="about-container">
@@ -25,23 +35,27 @@ const About = () => {
       <section className="team-section">
         <h2>Meet Our Team</h2>
         <div className="team-members">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="team-member"
-              onMouseEnter={() => setHoveredMember(member)}
-              onMouseLeave={() => setHoveredMember(null)}
-            >
-              <img src={`${process.env.PUBLIC_URL}/${member.image}`} alt={member.name} className="team-member-image" />
-              <h3>{member.name}</h3>
-              <p><em>{member.role}</em></p>
-              <p>{member.description}</p>
-            </div>
-          ))}
+          {teamMembers.map((member, index) => {
+            const imagePath = `${process.env.PUBLIC_URL}/images/${member.image}`;
+            console.log(`Rendering team member: ${member.name}, Image path: ${imagePath}`);
+            return (
+              <div
+                key={index}
+                className="team-member"
+                onMouseEnter={() => setHoveredMember(member)}
+                onMouseLeave={() => setHoveredMember(null)}
+              >
+                <img src={imagePath} alt={member.name} className="team-member-image" />
+                <h3>{member.name}</h3>
+                <p><em>{member.role}</em></p>
+                <p>{member.description}</p>
+              </div>
+            );
+          })}
         </div>
         {hoveredMember && (
           <div className="hovered-member-image">
-            <img src={`${process.env.PUBLIC_URL}/${hoveredMember.image}`} alt={hoveredMember.name} />
+            <img src={`${process.env.PUBLIC_URL}/images/${hoveredMember.image}`} alt={hoveredMember.name} />
           </div>
         )}
       </section>
