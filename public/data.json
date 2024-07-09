@@ -34,19 +34,19 @@
     {
       "name": "John Doe",
       "role": "Head Chef",
-      "image": "images/Chief1.png",
+      "image": "images/chief1.png",
       "description": "John is a culinary genius with over 20 years of experience in the kitchen. His passion for cooking is matched only by his love for teaching others."
     },
     {
       "name": "Jane Smith",
       "role": "Sous Chef",
-      "image": "images/Chief2.png",
+      "image": "images/chief2.png",
       "description": "Jane brings creativity and flair to every dish she prepares. She has been an integral part of our team for the past 10 years."
     },
     {
       "name": "Robert Brown",
       "role": "Pastry Chef",
-      "image": "images/Chief3.png",
+      "image": "images/chief3.png",
       "description": "Robert is a master of pastries and desserts. His creations are not only delicious but also works of art."
     }
   ],
