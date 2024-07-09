@@ -12,7 +12,6 @@ Welcome to the Restaurant App! This application is designed to provide a seamles
 - [Redux State Management](#redux-state-management)
 - [Responsive Design](#responsive-design)
 - [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
 
 ## Features
 
@@ -108,9 +107,4 @@ We welcome contributions to enhance the Restaurant App. To contribute:
 
 5. Open a pull request.
 
-
-## Acknowledgements
-
-- Thanks to the open-source community for the tools and libraries used in this project.
-- Special thanks to the contributors who have helped improve the app.
 
