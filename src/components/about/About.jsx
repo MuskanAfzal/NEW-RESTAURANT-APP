@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import './About.css';
 
 const About = () => {
@@ -7,6 +6,7 @@ const About = () => {
   const [hoveredMember, setHoveredMember] = useState(null);
 
   useEffect(() => {
+    console.log('Fetching team members...');
     fetch('/data.json')
       .then(response => {
         console.log('Fetched response:', response);
@@ -23,6 +23,10 @@ const About = () => {
     console.log('Team members state updated:', teamMembers);
   }, [teamMembers]);
 
+  useEffect(() => {
+    console.log('Hovered member:', hoveredMember);
+  }, [hoveredMember]);
+
   return (
     <div className="about-container">
       <section className="about-section">
@@ -36,7 +40,7 @@ const About = () => {
         <h2>Meet Our Team</h2>
         <div className="team-members">
           {teamMembers.map((member, index) => {
-            const imagePath = `${process.env.PUBLIC_URL}${member.image}`;
+            const imagePath = `${process.env.PUBLIC_URL}/${member.image}`;
             console.log(`Rendering team member: ${member.name}, Image path: ${imagePath}`);
             return (
               <div
@@ -55,23 +59,12 @@ const About = () => {
         </div>
         {hoveredMember && (
           <div className="hovered-member-image">
-            <img src={`${process.env.PUBLIC_URL}${hoveredMember.image}`} alt={hoveredMember.name} />
+            <img src={`${process.env.PUBLIC_URL}/${hoveredMember.image}`} alt={hoveredMember.name} />
           </div>
         )}
       </section>
     </div>
   );
-};
-
-About.propTypes = {
-  teamMembers: PropTypes.arrayOf(
-    PropTypes.shape({
-      image: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      role: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    })
-  ),
 };
 
 export default About;
