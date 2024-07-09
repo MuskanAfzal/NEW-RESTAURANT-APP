@@ -101,6 +101,7 @@
   
   @media (max-width: 768px) {
     .about-container {
+      
       max-height: 2000vh;
     }
 
