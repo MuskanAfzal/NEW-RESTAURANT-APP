@@ -176,7 +176,7 @@
   .navbar {
     max-width: 84%;
     background: none;
-    margin-top: 7vh;
+    margin-top: 4vh;
     margin-left: 5vw;
   }
 
@@ -241,7 +241,7 @@
 
   .popup {
     position: absolute;
-    top: 70vh;
+    top: 84vh;
     background: none;
   }
 

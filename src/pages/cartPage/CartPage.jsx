@@ -32,7 +32,7 @@ export default function CartPage() {
               <li id="cart-product-heading">Product</li>
               <li>Price</li>
               <li>Quantity</li>
-              <li>Subtotal</li>
+              <li id="cart-subtotal-heading">Subtotal</li>
             </ul>
             <div className="cart-items-box">
               {cart.map((item) => (
