@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import './About.css';
 
 const About = () => {
@@ -46,6 +47,17 @@ const About = () => {
       </section>
     </div>
   );
+};
+
+About.propTypes = {
+  teamMembers: PropTypes.arrayOf(
+    PropTypes.shape({
+      image: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      role: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default About;
