@@ -1,0 +1,135 @@
+.final-checkout-container {
+  max-width: 80vw;
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: "Playfair Display", serif;
+  color: #333;
+  margin-bottom: 20vh;
+}
+
+.final-checkout-details {
+  padding-top: 20vh;
+  flex: 1;
+  margin-right: 20vw;
+}
+
+.final-checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.place-order-button {
+  padding: 10px;
+  background-color: #cfb181;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.place-order-button:hover {
+  background-color: #bb9457;
+}
+
+.final-checkout-summary {
+  width: 20vw;
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.total-section {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the section */
+}
+
+.cart-total-heading {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.total-section div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total-section hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.final-checkout-button {
+  margin-top: 1vw;
+  padding: 10px;
+  background-color: #cfb181;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.final-checkout-button:hover {
+  background-color: #bb9457;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .final-checkout-container {
+    padding-top: 10vh;
+    flex-direction: column;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  .final-checkout-details {
+    padding-top: 5vh;
+    margin-right: 0;
+  }
+
+  .final-checkout-summary {
+    width: 90%;
+    margin-top: 5vh;
+  }
+
+  .cart-total-heading {
+    font-size: 1.2em;
+  }
+
+  .place-order-button,
+  .final-checkout-button {
+    font-size: 1em;
+  }
+
+  .form-group input {
+    padding: 8px;
+  }
+}

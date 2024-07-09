@@ -1,0 +1,175 @@
+.dish-detail-container {
+  padding: 20px;
+  padding-top: 20vh;
+  font-family: "Playfair Display", serif;
+  color: #333;
+}
+
+.dish-detail {
+  max-width: 75vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.dish-image {
+  margin-left: 25vw;
+  width: 30vw;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.dish-info {
+  margin-left: 2vw;
+  max-width: 600px;
+}
+
+.dish-info h1 {
+  font-size: 2.2vw;
+  margin-bottom: 20px;
+}
+
+.dish-info p {
+  font-size: 1.1vw;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.dish-info h3 {
+  font-size: 1.5vw;
+  margin-bottom: 20px;
+}
+
+.add-to-cart-button {
+  background-color: #cfaa6e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2vw;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.add-to-cart-button:hover {
+  background-color: #ac8c59;
+}
+
+.related-dishes {
+  margin-top: 40px;
+}
+
+.related-dishes h2 {
+  font-size: 1.8vw;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.related-dishes-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.related-dish-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #ac8c5954;
+  padding: 20px;
+  width: 15vw;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.related-dish-item:hover {
+  transform: scale(1.05);
+}
+
+.related-dish-image {
+  width: 100%; 
+  height: 10vw; 
+  object-fit: cover; 
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.realated-dishes-h3{
+  font-size: 1.1vw;
+}
+
+
+.related-dishes-list p{
+  font-size: .8vw;
+}
+
+@media (max-width: 1200px) {
+  .dish-detail-container {
+    padding-top: 15vh;
+  }
+
+  .dish-detail {
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .dish-image {
+    margin-left: 5vw;
+    width: 80vw;
+  }
+  
+  .dish-info {
+    margin-left: 4vw;
+    max-width: 73vw;
+  }
+  .dish-info h1 {
+    font-size: 7.2vw;
+  }
+
+  .dish-info p {
+    font-size: 4.1vw;
+  }
+  
+  .dish-info h3 {
+    font-size: 5.5vw;
+  }
+  
+  .add-to-cart-button {
+    font-size: 3.6vw;
+  }
+  
+  .related-dishes h2 {
+    font-size: 5.8vw;
+  }
+  
+  .related-dishes-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .related-dish-item {
+    align-items: center;
+    width: 55vw;
+    margin-left: 12vw;
+  }
+  
+  .related-dish-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .related-dish-image {
+    height: 50vw; 
+  }
+  
+  .realated-dishes-h3{
+    font-size: 4.1vw;
+  }
+  
+  
+  .related-dishes-list p{
+    font-size: 3.8vw;
+  }
+  
+}

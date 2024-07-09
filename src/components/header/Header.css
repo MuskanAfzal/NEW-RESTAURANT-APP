@@ -1,0 +1,88 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  margin-top: 0%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  transition: filter 2s ease-in-out; 
+}
+
+.header-container {
+  position: relative;
+}
+
+.header-container.blur .carousel-image {
+  filter: blur(5px); /* Adjust the blur intensity as needed */
+}
+
+.animated-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  animation: fadeIn 5s ease-in-out;
+}
+
+.logo {
+  width: 20vw; /* Adjust this size as needed */
+  margin-bottom: 20px;
+  animation: fadeIn 5s ease-in-out;
+}
+
+.animated-content h1 {
+  font-size: 3em;
+  margin: 0;
+  animation: slideInDown 5s ease-in-out;
+}
+
+.animated-content p {
+  font-size: 1.5em;
+  margin: 0;
+  animation: slideInUp 5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+    width: 75vw; /* Adjust this size as needed */
+    margin-bottom: 20px;
+    animation: fadeIn 5s ease-in-out;
+  }
+  
+}

@@ -1,0 +1,85 @@
+.blog-detail-container {
+  padding: 20px;
+  padding-top: 20vh;
+  font-family: "Playfair Display", serif;
+  color: #333;
+}
+
+.blog-detail {
+  max-width: 75vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-image {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.blog-info {
+  text-align: left;
+  max-width: 800px;
+}
+
+.blog-info h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.blog-info p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.related-blogs {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.related-blogs h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.related-blogs-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.related-blog-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.related-blog-item:hover {
+  transform: scale(1.05);
+}
+
+.related-blog-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+  .related-blog-item p {
+    display: none;
+  }
+  .related-blog-item h3 {
+font-size: 3vw;
+  }
+}
