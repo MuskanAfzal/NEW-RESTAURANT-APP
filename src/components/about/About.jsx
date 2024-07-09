@@ -32,7 +32,7 @@ const About = () => {
               onMouseEnter={() => setHoveredMember(member)}
               onMouseLeave={() => setHoveredMember(null)}
             >
-              <img src={`${process.env.PUBLIC_URL}/${member.image}`} alt={member.name} className="team-member-image" />
+              <img src={`/images/${member.image}`} alt={member.name} className="team-member-image" />
               <h3>{member.name}</h3>
               <p><em>{member.role}</em></p>
               <p>{member.description}</p>
@@ -41,7 +41,7 @@ const About = () => {
         </div>
         {hoveredMember && (
           <div className="hovered-member-image">
-            <img src={`${process.env.PUBLIC_URL}/${hoveredMember.image}`} alt={hoveredMember.name} />
+            <img src={`/images/${hoveredMember.image}`} alt={hoveredMember.name} />
           </div>
         )}
       </section>
